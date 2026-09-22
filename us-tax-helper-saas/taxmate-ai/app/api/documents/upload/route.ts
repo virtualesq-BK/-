@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server';
-import { getServerSession } from 'next-auth';
 import { TaxDocumentStatus } from '@prisma/client';
-import { authOptions } from '@/lib/auth/auth-options';
+import { requireAuth } from '@/lib/auth/require-role';
 import { prisma } from '@/lib/db/prisma';
 import { getFileStorage } from '@/lib/storage';
 import { enqueueDocumentProcessing } from '@/lib/queue/document-queue';
@@ -14,9 +13,9 @@ export const runtime = 'nodejs';
 export const maxDuration = 60;
 
 export async function POST(req: Request) {
-  const session = await getServerSession(authOptions);
-  if (!session?.user?.id) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  const auth = await requireAuth();
+  if ('error' in auth) {
+    return NextResponse.json({ error: auth.error }, { status: auth.status });
   }
 
   const formData = await req.formData();
@@ -32,7 +31,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: validation.error }, { status: 400 });
   }
 
-  const userId = session.user.id;
+  const userId = auth.user.id;
   const taxYear = taxYearRaw
     ? parseInt(String(taxYearRaw), 10)
     : new Date().getFullYear() - 1;

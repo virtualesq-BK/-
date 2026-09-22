@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server';
-import { getServerSession } from 'next-auth';
 import OpenAI from 'openai';
-import { authOptions } from '@/lib/auth/auth-options';
+import { requireAuth } from '@/lib/auth/require-role';
 import { openAIClientOptions } from '@/lib/ai/openai-config';
 
 export const runtime = 'nodejs';
@@ -9,9 +8,9 @@ export const runtime = 'nodejs';
 const openaiClient = new OpenAI(openAIClientOptions());
 
 export async function POST(req: Request) {
-  const session = await getServerSession(authOptions);
-  if (!session?.user?.id) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  const auth = await requireAuth();
+  if ('error' in auth) {
+    return NextResponse.json({ error: auth.error }, { status: auth.status });
   }
 
   if (!process.env.OPENAI_API_KEY) {

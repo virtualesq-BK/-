@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server';
-import { getServerSession } from 'next-auth';
 import { Prisma, TaxReturnStatus } from '@prisma/client';
-import { authOptions } from '@/lib/auth/auth-options';
+import { requireAuth } from '@/lib/auth/require-role';
 import { prisma } from '@/lib/db/prisma';
 import { aggregateUserIncome } from '@/lib/ai/aggregateIncome';
 import type { ExtractedTaxData } from '@/lib/documents/types';
@@ -25,14 +24,14 @@ function getExistingDocuments(aiGeneratedData: unknown): Array<{
 }
 
 export async function POST(req: Request, context: RouteContext) {
-  const session = await getServerSession(authOptions);
-  if (!session?.user?.id) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  const auth = await requireAuth();
+  if ('error' in auth) {
+    return NextResponse.json({ error: auth.error }, { status: auth.status });
   }
 
   const { id } = context.params;
   const body = await req.json().catch(() => ({}));
-  const userId = session.user.id;
+  const userId = auth.user.id;
 
   const document = await prisma.taxDocument.findFirst({
     where: { id, userId, deletedAt: null, status: 'COMPLETED' },

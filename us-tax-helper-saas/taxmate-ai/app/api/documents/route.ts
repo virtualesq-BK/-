@@ -1,17 +1,16 @@
 import { NextResponse } from 'next/server';
-import { getServerSession } from 'next-auth';
-import { authOptions } from '@/lib/auth/auth-options';
+import { requireAuth } from '@/lib/auth/require-role';
 import { prisma } from '@/lib/db/prisma';
 import { TaxDocumentType } from '@prisma/client';
 
 export async function GET() {
-  const session = await getServerSession(authOptions);
-  if (!session?.user?.email) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  const auth = await requireAuth();
+  if ('error' in auth) {
+    return NextResponse.json({ error: auth.error }, { status: auth.status });
   }
 
   const user = await prisma.user.findUnique({
-    where: { email: session.user.email, deletedAt: null },
+    where: { id: auth.user.id, deletedAt: null },
     include: {
       taxDocuments: {
         where: { deletedAt: null },
@@ -24,25 +23,17 @@ export async function GET() {
 }
 
 export async function POST(req: Request) {
-  const session = await getServerSession(authOptions);
-  if (!session?.user?.email) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  const auth = await requireAuth();
+  if ('error' in auth) {
+    return NextResponse.json({ error: auth.error }, { status: auth.status });
   }
 
   const body = await req.json();
   const { fileName, fileUrl, documentType, fileSize, taxYear } = body;
 
-  const user = await prisma.user.findFirst({
-    where: { email: session.user.email, deletedAt: null },
-  });
-
-  if (!user) {
-    return NextResponse.json({ error: 'User not found' }, { status: 404 });
-  }
-
   const document = await prisma.taxDocument.create({
     data: {
-      userId: user.id,
+      userId: auth.user.id,
       fileName,
       fileUrl,
       documentType: (documentType as TaxDocumentType) ?? TaxDocumentType.Other,

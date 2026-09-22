@@ -18,10 +18,7 @@ export default function HomePage() {
       </div>
       <div className="tm-fade-up tm-fade-up-delay-1 flex gap-4">
         <Button asChild size="lg">
-          <Link href="/signup">Get Started</Link>
-        </Button>
-        <Button asChild variant="outline" size="lg">
-          <Link href="/login">Sign In</Link>
+          <Link href="/dashboard">Get Started</Link>
         </Button>
       </div>
       <footer className="tm-fade-up tm-fade-up-delay-2 text-center text-xs text-muted-foreground">

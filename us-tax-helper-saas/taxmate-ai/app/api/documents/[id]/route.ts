@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
-import { getServerSession } from 'next-auth';
-import { authOptions } from '@/lib/auth/auth-options';
+import { requireAuth } from '@/lib/auth/require-role';
 import { prisma } from '@/lib/db/prisma';
 import { ExtractedTaxDataSchema } from '@/lib/documents/types';
 import { Prisma, TaxDocumentType } from '@prisma/client';
@@ -8,15 +7,15 @@ import { Prisma, TaxDocumentType } from '@prisma/client';
 type RouteContext = { params: { id: string } };
 
 export async function GET(_req: Request, context: RouteContext) {
-  const session = await getServerSession(authOptions);
-  if (!session?.user?.id) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  const auth = await requireAuth();
+  if ('error' in auth) {
+    return NextResponse.json({ error: auth.error }, { status: auth.status });
   }
 
   const { id } = context.params;
 
   const document = await prisma.taxDocument.findFirst({
-    where: { id, userId: session.user.id, deletedAt: null },
+    where: { id, userId: auth.user.id, deletedAt: null },
   });
 
   if (!document) {
@@ -27,16 +26,16 @@ export async function GET(_req: Request, context: RouteContext) {
 }
 
 export async function PATCH(req: Request, context: RouteContext) {
-  const session = await getServerSession(authOptions);
-  if (!session?.user?.id) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  const auth = await requireAuth();
+  if ('error' in auth) {
+    return NextResponse.json({ error: auth.error }, { status: auth.status });
   }
 
   const { id } = context.params;
   const body = await req.json();
 
   const existing = await prisma.taxDocument.findFirst({
-    where: { id, userId: session.user.id, deletedAt: null },
+    where: { id, userId: auth.user.id, deletedAt: null },
   });
 
   if (!existing) {

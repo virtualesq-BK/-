@@ -1,14 +1,13 @@
 import { NextResponse } from 'next/server';
-import { getServerSession } from 'next-auth';
 import { MessageRole, TaxReturnStatus } from '@prisma/client';
-import { authOptions } from '@/lib/auth/auth-options';
+import { requireAuth } from '@/lib/auth/require-role';
 import { prisma } from '@/lib/db/prisma';
 import { getOrCreateCurrentTaxReturn } from '@/lib/ai/auditRiskScore';
 
 export async function POST(req: Request) {
-  const session = await getServerSession(authOptions);
-  if (!session?.user?.id) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  const auth = await requireAuth();
+  if ('error' in auth) {
+    return NextResponse.json({ error: auth.error }, { status: auth.status });
   }
 
   const { messageContent, taxReturnId, messageId } = await req.json();
@@ -17,7 +16,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'messageContent is required' }, { status: 400 });
   }
 
-  const userId = session.user.id;
+  const userId = auth.user.id;
 
   const taxReturn =
     taxReturnId != null

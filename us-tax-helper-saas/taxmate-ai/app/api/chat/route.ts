@@ -1,5 +1,4 @@
 import { streamText } from 'ai';
-import { getServerSession } from 'next-auth';
 import { MessageRole } from '@prisma/client';
 import { openai } from '@/lib/ai/openai';
 import {
@@ -11,7 +10,7 @@ import {
   getOrCreateCurrentTaxReturn,
   persistAuditRiskScore,
 } from '@/lib/ai/auditRiskScore';
-import { authOptions } from '@/lib/auth/auth-options';
+import { requireAuth } from '@/lib/auth/require-role';
 import { prisma } from '@/lib/db/prisma';
 
 export const runtime = 'nodejs';
@@ -23,10 +22,10 @@ type ChatMessage = {
 };
 
 export async function POST(req: Request) {
-  const session = await getServerSession(authOptions);
-  if (!session?.user?.id) {
-    return new Response(JSON.stringify({ error: 'Unauthorized' }), {
-      status: 401,
+  const auth = await requireAuth();
+  if ('error' in auth) {
+    return new Response(JSON.stringify({ error: auth.error }), {
+      status: auth.status,
       headers: { 'Content-Type': 'application/json' },
     });
   }
@@ -45,7 +44,7 @@ export async function POST(req: Request) {
     });
   }
 
-  const userId = session.user.id;
+  const userId = auth.user.id;
   const query = lastUserMessage.content;
 
   const { context: irsContext } = await retrieveIrsContext(query, 5);

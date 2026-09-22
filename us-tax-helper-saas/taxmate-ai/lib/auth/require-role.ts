@@ -2,10 +2,16 @@ import { getServerSession } from 'next-auth';
 import { UserRole } from '@prisma/client';
 import { authOptions } from '@/lib/auth/auth-options';
 import { prisma } from '@/lib/db/prisma';
+import { isDemoModeEnabled, getDemoUser } from '@/lib/auth/demo-mode';
 
 export async function requireAuth() {
   const session = await getServerSession(authOptions);
+
   if (!session?.user?.id) {
+    if (isDemoModeEnabled()) {
+      const user = await getDemoUser();
+      return { user, session: null };
+    }
     return { error: 'Unauthorized' as const, status: 401 as const };
   }
 
