@@ -1,0 +1,39 @@
+{
+  "url": "https://www.irs.gov/newsroom/form-w-2-ssn-data-theft-information-for-businesses-and-payroll-service-providers",
+  "title": "Form W-2/SSN Data theft: Information for businesses and payroll service providers | Internal Revenue Service",
+  "lang": "en",
+  "text": "Skip to main content Form W-2/SSN Data theft: Information for businesses and payroll service providers More In News Working Families Tax Cuts News releases Tax relief in disaster situations Topics in the news Fact sheets IRS statements and announcements IRS Tax Tips IRS guidance Multimedia center Tax articles to share Posters to share As the Internal Revenue Service, the state tax agencies and the tax industry make progress combatting identity theft, cybercriminals need more data to impersonate real taxpayers and file fraudulent returns for refunds. Currently, a particularly dangerous email scam is circulating. Here's how it works: Cybercriminals use various spoofing techniques to disguise an email to make it appear as if it is from an organization executive. The email is sent to an employee in the payroll or human resources departments, requesting a list of all employees and their Forms W-2. This scam is sometimes referred to as business email compromise (BEC) or business email spoofing (BES). Because time is critical, the IRS has created avenues for businesses and payroll service professionals to report if they lost data to this scam or if they only received the email without falling victim. If your company did not fall victim, see how to report the scam email to the IRS . How to report a data loss related to the W-2 scam If notified quickly after the loss, the IRS may be able to take steps that help protect your employees from tax-related identity theft. Ways to contact the IRS* about a W-2 loss include Email dataloss@irs.gov to notify the IRS of a W-2 data loss and provide your contact information listed below so that we may call you. In the subject line, type \"W2 Data Loss\" so that the email can be routed properly. Do not attach any employee personally identifiable information (PII) data. Business name Business employer identification number (EIN) associated with the data loss Contact name Contact phone number Summary of how the data loss occurred Volume of employees impacted *The IRS doesn't initiate contact with taxpayers by email, text messages or social media channels to request personal or financial information. Any contact from the IRS will be in response to a contact initiated by you. Cybercriminals, when they learn of a new IRS process, often create false IRS web sites and IRS impersonation emails. How to report data loss to state tax agencies Any breach of personal information could have an effect on the victim's tax accounts with the states as well as the IRS. You should email the Federation of Tax Administrators at statealert@taxadmin.org to get information on how to report victim information to the states. How to report data loss to other law enforcement officials Businesses/payroll service providers should file a complaint with the FBI's Internet Crime Complaint Center (IC3) Businesses/payroll service providers may be asked to file a report with their local law enforcement agency What to tell your employees about a Form W-2 data loss Cybercriminals who successfully steal Forms W-2 immediately attempt to monetize their thefts. Criminals may immediately attempt to file fraudulent tax returns claiming a refund. Or they may sell the data on the Internet's black market sites to others who file fraudulent tax returns or use the names and SSNs to create other crimes. Here is some guidance to share with your employees: Review Identity theft guide for individuals Share IRS Publication 5027, Identity Theft Information for Taxpayers PDF , with employees and direct them to the \"Steps for Identity Theft Victims\" which includes: Contacting one of the three credit bureaus to place a \"fraud alert\" on their account; they may consider placing a \" credit freeze \" which offers more protection. File a complaint with the Federal Trade Commission, the lead federal agency on identity theft issues. Review FTC's Identity Theft information for additional steps to recover from identity theft. The FTC also offers guidance to businesses on how to inform employees of the incident and additional steps businesses may take. See Data Breach Response: A Guide for Business. Share IRS Publication 4524, Security Awareness for Taxpayers PDF , with your employees How to report receiving the W-2 phishing email If your business received the email but did NOT fall victim to the scam, forward the email to the IRS. The IRS needs the email header from the phishing email for its investigation, which means you must do more than just forward the email to phishing@irs.gov . Here's what to do with the W-2 email scam: The email headers should be provided in plain ASCII text format. Do not print and scan Save the phishing email as an email file on your computer desktop Open your email and attach the phishing email file you previously saved Send your email containing the attached phishing email file to phishing@irs.gov . Subject Line: W2 Scam. Do not attach any sensitive data such as employee SSNs or W-2s. File a complaint with the Internet Crime Complaint Center (IC3) operated by the Federal Bureau of Investigation. W-2 scam Transcript Page Last Reviewed or Updated: 12-May-2026 Share Facebook Twitter Linkedin Print",
+  "headings": [
+    "Form W-2/SSN Data theft: Information for businesses and payroll service providers",
+    "How to report a data loss related to the W-2 scam",
+    "How to report data loss to state tax agencies",
+    "How to report data loss to other law enforcement officials",
+    "What to tell your employees about a Form W-2 data loss",
+    "How to report receiving the W-2 phishing email",
+    "More In News"
+  ],
+  "links": [
+    "https://www.irs.gov/newsroom/form-w-2-ssn-data-theft-information-for-businesses-and-payroll-service-providers",
+    "https://www.irs.gov/newsroom/working-families-tax-cuts",
+    "https://www.irs.gov/newsroom/news-releases-for-current-month",
+    "https://www.irs.gov/newsroom/tax-relief-in-disaster-situations",
+    "https://www.irs.gov/newsroom/topics-in-the-news",
+    "https://www.irs.gov/newsroom/fact-sheets",
+    "https://www.irs.gov/newsroom/irs-statements-and-announcements",
+    "https://www.irs.gov/newsroom/irs-tax-tips",
+    "https://www.irs.gov/newsroom/irs-guidance",
+    "https://www.irs.gov/newsroom/multimedia-center",
+    "https://www.irs.gov/newsroom/tax-articles-to-share",
+    "https://www.irs.gov/newsroom/posters-to-share",
+    "https://www.irs.gov/newsroom/form-w-2-ssn-data-theft-information-for-businesses-and-payroll-service-providers",
+    "https://www.irs.gov/newsroom/form-w-2-ssn-data-theft-information-for-businesses-and-payroll-service-providers",
+    "https://www.irs.gov/identity-theft-central/identity-theft-guide-for-individuals",
+    "https://www.irs.gov/pub/irs-pdf/p5027.pdf",
+    "https://www.irs.gov/pub/irs-pdf/p4524.pdf",
+    "https://www.irs.gov/newsroom/w-2-scam-youtube-video-text-script",
+    "https://www.irs.gov/newsroom/form-w-2-ssn-data-theft-information-for-businesses-and-payroll-service-providers"
+  ],
+  "fetched_at": "2026-09-22T14:47:22.836585+00:00",
+  "low_quality": false,
+  "text_sha256": "17df22f259a7eae5de36fa19417a752c8c519f746d1643034a15041dd279253a"
+}

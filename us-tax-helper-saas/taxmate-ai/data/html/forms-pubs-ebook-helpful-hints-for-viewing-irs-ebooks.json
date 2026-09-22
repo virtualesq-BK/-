@@ -1,0 +1,27 @@
+{
+  "url": "https://www.irs.gov/forms-pubs/ebook/helpful-hints-for-viewing-irs-ebooks",
+  "title": "Helpful hints for viewing IRS eBooks | Internal Revenue Service",
+  "lang": "en",
+  "text": "Skip to main content Helpful hints for viewing IRS eBooks More In Forms and Instructions Current year Prior year Accessible eBooks Browser-friendly forms and publications Mobile-friendly forms Post release changes to forms Order forms and publications Help with forms and instructions Comment on tax forms and publications Some IRS tax products contain complex tables and graphics. These are best viewed on a tablet in the vertical position or by double tapping the table/graphic to enlarge them to full screen. Some table widths may not be completely viewable in the 2-page layout. For best viewing in iBooks, modify the default iBook settings on your device to turn off full justification and auto-hyphenation. These settings are located under Settings->iBooks on your device. For best search results when searching for a specific table or worksheet, only search for the number before the dash. For example, to search for Table 1-1, search for Table 1 and scroll to find the appropriate table. When an eBook is first opened, it may take a certain amount of time (several seconds to a couple of minutes) before the whole book is downloaded. During that time, accessing some portions of the book (especially near the end) may not be possible. Some IRS tax products contain complex tables. Complex tables may slow the performance of some publications. Page Last Reviewed or Updated: 17-Sep-2026 Share Facebook Twitter Linkedin Print",
+  "headings": [
+    "Helpful hints for viewing IRS eBooks",
+    "More In Forms and Instructions"
+  ],
+  "links": [
+    "https://www.irs.gov/forms-pubs/ebook/helpful-hints-for-viewing-irs-ebooks",
+    "https://www.irs.gov/forms-instructions",
+    "https://www.irs.gov/forms-pubs/prior-year",
+    "https://www.irs.gov/forms-pubs/accessible-irs-tax-products",
+    "https://www.irs.gov/forms-pubs/ebook",
+    "https://www.irs.gov/forms-pubs/browser-friendly",
+    "https://www.irs.gov/forms-pubs/mobile-friendly-forms",
+    "https://www.irs.gov/forms-pubs/changes-to-current-forms-publications",
+    "https://www.irs.gov/forms-pubs/order-products",
+    "https://www.irs.gov/forms-pubs/more-information",
+    "https://www.irs.gov/forms-pubs/comment-on-tax-forms-and-publications",
+    "https://www.irs.gov/forms-pubs/ebook/helpful-hints-for-viewing-irs-ebooks"
+  ],
+  "fetched_at": "2026-09-22T15:21:55.381864+00:00",
+  "low_quality": false,
+  "text_sha256": "680c184a7245f6dfddf829a8c6526287a29578ad7a66a1f9cb4a48774b1f451f"
+}

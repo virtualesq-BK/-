@@ -1,0 +1,30 @@
+{
+  "url": "https://www.irs.gov/forms-pubs/items-to-consider-while-completing-form-2848",
+  "title": "Items to consider while completing Form 2848 | Internal Revenue Service",
+  "lang": "en",
+  "text": "Skip to main content Items to consider while completing Form 2848 English Español More In Forms and Instructions Current year Prior year Accessible eBooks Browser-friendly forms and publications Mobile-friendly forms Post release changes to forms Order forms and publications Help with forms and instructions Comment on tax forms and publications Entries on certain lines of Form 2848 will cause the authorization to be classified as “modified” when recorded on the Centralized Authorization File (CAF). When a Form 2848 is classified as “modified” on the CAF, appointed representatives on the forms are unable to: Access the Transcript Delivery System (TDS) to obtain IRS transcripts of the represented taxpayer for the tax matters, tax forms, and tax periods specified on each form, or Use IRS Tax Pro Account to establish an installment agreement for a represented taxpayer for the affected tax matters and periods. A Form 2848 is “modified” in these instances: Line 5a, Additional acts authorized, grants any authorization other than disclosure to third parties, substitute or add representative(s), or sign a return, or Line 5b, Specific acts not authorized, limits the representative’s authority as described on line 5b. To prevent these issues, a Form 2848 must not contain check marks or entries in either lines 5a or 5b that will be considered modified. Note: Checking the box on line 4 will result in the authorization not being recorded on the CAF. Taxpayers and representatives should never check line 4 unless Form 2848 is, in fact, a specific- use form, and they should never file Forms 2848 designated for specific use with a CAF Unit, as the forms are not meant to be recorded on the CAF. See the Instructions for Form 2848 for examples of specific use, including the most common ones. Page Last Reviewed or Updated: 29-Jul-2026 Share Facebook Twitter Linkedin Print",
+  "headings": [
+    "Items to consider while completing Form 2848",
+    "More In Forms and Instructions"
+  ],
+  "links": [
+    "https://www.irs.gov/forms-pubs/items-to-consider-while-completing-form-2848",
+    "https://www.irs.gov/forms-pubs/items-to-consider-while-completing-form-2848",
+    "https://www.irs.gov/es/forms-pubs/items-to-consider-while-completing-form-2848",
+    "https://www.irs.gov/forms-instructions",
+    "https://www.irs.gov/forms-pubs/prior-year",
+    "https://www.irs.gov/forms-pubs/accessible-irs-tax-products",
+    "https://www.irs.gov/forms-pubs/ebook",
+    "https://www.irs.gov/forms-pubs/browser-friendly",
+    "https://www.irs.gov/forms-pubs/mobile-friendly-forms",
+    "https://www.irs.gov/forms-pubs/changes-to-current-forms-publications",
+    "https://www.irs.gov/forms-pubs/order-products",
+    "https://www.irs.gov/forms-pubs/more-information",
+    "https://www.irs.gov/forms-pubs/comment-on-tax-forms-and-publications",
+    "https://www.irs.gov/instructions/i2848",
+    "https://www.irs.gov/forms-pubs/items-to-consider-while-completing-form-2848"
+  ],
+  "fetched_at": "2026-09-22T15:11:29.568433+00:00",
+  "low_quality": false,
+  "text_sha256": "c968b594d99fd4333b0cb653e47655af4ad03aad6b16e1232f123f5b28a43525"
+}

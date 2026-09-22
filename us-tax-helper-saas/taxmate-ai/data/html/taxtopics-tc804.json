@@ -1,0 +1,42 @@
+{
+  "url": "https://www.irs.gov/taxtopics/tc804",
+  "title": "Topic no. 804, FIRE system test files and Combined Federal/State Filing (CF/SF) program | Internal Revenue Service",
+  "lang": "en",
+  "text": "Skip to main content Topic no. 804, FIRE system test files and Combined Federal/State Filing (CF/SF) program English Español 中文 (繁體) 한국어 Русский Tiếng Việt More In Help Interactive Tax Assistant Tools Report fraud Tax scams Identity theft Notices and letters Appeals Frequently asked questions Accessibility Contact your local IRS office Contact an international IRS office Tax topics Other languages FIRE system test files First-time electronic filers are encouraged (but not required) to submit a Filing Information Returns Electronically (FIRE) test file to test hardware and software. However, a test file is required when applying to participate in the Combined Federal/State Filing (CF/SF) Program. The FIRE production system and the FIRE test system do not communicate. You must create and keep a separate account for each FIRE account. Combined Federal/State Filing (CF/SF) Program The CF/SF Program forwards original and corrected information returns filed electronically through the FIRE system to participating states free of charge for approved filers, eliminating separate reporting to the participating states. The information returns that may be filed with the CF/SF Program are: Form 1099-B, Proceeds from Broker and Barter Exchange Transactions Form 1099-DIV, Dividends and Distributions Form 1099-G, Certain Government Payments Form 1099-INT, Interest Income Form 1099-K, Payment Card and Third Party Network Transactions Form 1099-MISC, Miscellaneous Information Form 1099-NEC, Nonemployee Compensation Form 1099-OID, Original Issue Discount Form 1099-PATR, Taxable Distributions Received From Cooperatives Form 1099-R, Distributions From Pensions, Annuities, Retirement or Profit-Sharing Plans, IRAs, Insurance Contracts, etc., and Form 5498, IRA Contribution Information To request approval to participate in the CF/SF Program, an electronic test file coded for the program must be submitted to the FIRE Test System . Refer to FIRE for FIRE testing availability dates. Although a test file is only required for the first year a filer participates in the program, it's highly recommended that a test file be sent every year. If the CF/SF test file is acceptable, the IRS will send the filer a letter of approval. CF/SF records must be coded using the two-digit codes assigned to the participating states from the table in Publication 1220, Specifications for Electronic Filing of Forms 1097, 1098, 1099, 3921, 3922, 5498, and W-2G PDF . Some participating states require a separate notification that the issuer is filing in this manner. The IRS acts as a forwarding agent only. It is the issuer's responsibility to contact the appropriate state(s) for further information. For information on obtaining a Transmitter Control Code (TCC), required to transmit files through the FIRE system, refer to Topic no. 802, Applying to file information returns electronically . Page Last Reviewed or Updated: 04-Dec-2025 Share Facebook Twitter Linkedin Print",
+  "headings": [
+    "Topic no. 804, FIRE system test files and Combined Federal/State Filing (CF/SF) program",
+    "FIRE system test files",
+    "Combined Federal/State Filing (CF/SF) Program",
+    "More In Help"
+  ],
+  "links": [
+    "https://www.irs.gov/taxtopics/tc804",
+    "https://www.irs.gov/taxtopics/tc804",
+    "https://www.irs.gov/es/taxtopics/tc804",
+    "https://www.irs.gov/zh-hant/taxtopics/tc804",
+    "https://www.irs.gov/ko/taxtopics/tc804",
+    "https://www.irs.gov/ru/taxtopics/tc804",
+    "https://www.irs.gov/vi/taxtopics/tc804",
+    "https://www.irs.gov/help/ita",
+    "https://www.irs.gov/help/tools",
+    "https://www.irs.gov/help/report-fraud",
+    "https://www.irs.gov/help/tax-scams",
+    "https://www.irs.gov/identity-theft-central",
+    "https://www.irs.gov/individuals/understanding-your-irs-notice-or-letter",
+    "https://www.irs.gov/independent-office-of-appeals",
+    "https://www.irs.gov/faqs",
+    "https://www.irs.gov/accessibility",
+    "https://www.irs.gov/help/contact-your-local-irs-office",
+    "https://www.irs.gov/help/contact-my-local-office-internationally",
+    "https://www.irs.gov/taxtopics",
+    "https://www.irs.gov/help/languages",
+    "https://www.irs.gov/e-file-providers/filing-information-returns-electronically-fire",
+    "https://www.irs.gov/e-file-providers/filing-information-returns-electronically-fire",
+    "https://www.irs.gov/pub/irs-pdf/p1220.pdf",
+    "https://www.irs.gov/taxtopics/tc802",
+    "https://www.irs.gov/taxtopics/tc804"
+  ],
+  "fetched_at": "2026-09-22T14:54:21.175292+00:00",
+  "low_quality": false,
+  "text_sha256": "feefe91ddb368740abc53044d860ad043787bb730414088513406576bd66c4dc"
+}

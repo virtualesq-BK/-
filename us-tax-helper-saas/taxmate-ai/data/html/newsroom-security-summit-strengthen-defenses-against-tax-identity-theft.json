@@ -1,0 +1,42 @@
+{
+  "url": "https://www.irs.gov/newsroom/security-summit-strengthen-defenses-against-tax-identity-theft",
+  "title": "Security Summit: Strengthen defenses against tax identity theft | Internal Revenue Service",
+  "lang": "en",
+  "text": "Skip to main content Security Summit: Strengthen defenses against tax identity theft English 中文 (简体) More In News Working Families Tax Cuts News releases News releases for frequently asked questions Tax relief in disaster situations Topics in the news Fact sheets IRS statements and announcements IRS Tax Tips IRS guidance Multimedia center Tax articles to share Posters to share Multifactor authentication, IP PINs, and secure online accounts add layers of protection IR-2026-106, Sept.4, 2026 WASHINGTON — The Internal Revenue Service and the Security Summit today urged tax professionals and taxpayers to strengthen defenses against tax-related identity theft. In the fourth installment of the “Protect Your Clients; Protect Yourself” summer series, the IRS and Security Summit partners highlight the benefits of multifactor authentication (MFA), Identity Protection PINs, and secure IRS online accounts. Under the Federal Trade Commission’s Safeguards Rule, tax preparation firms must use multifactor authentication to protect access to customer information, unless a Qualified Individual approves in writing an equivalent secure access control. “Taxpayers and tax professionals should take advantage of the powerful tools available to help protect against identity theft,” said IRS Chief Executive Officer Frank J. Bisignano. “Using multifactor authentication, IP PINs, and other protections adds important layers of security that helps safeguard sensitive data held by practitioners, taxpayers, and IRS systems.” What tax pros should know about MFA Multifactor authentication strengthens account security by requiring at least two independent factors to verify a user’s identity. These factors may include a password, a security code sent to a device, or biometric information. MFA helps protect against phishing, social engineering, and other technology attacks that exploit weak or stolen passwords. MFA best practices include: Use MFA across all services and data access points. Regularly review current MFA methods, standards, and emerging technologies. Provide different authentication options to meet users’ needs. Enable MFA in tax software, cloud storage, email, and other services containing sensitive client information. Use individual accounts and never share usernames or passwords. Tax professionals should use MFA to secure client information on computers and networks and to access client information stored in tax preparation software. The MFA requirement applies to tax preparation firms regardless of size. IP PINs help protect tax returns An IRS Identity Protection PIN , also referred to as an IP PIN, is a critical defense tool against identity thieves filing fraudulent tax returns. It is a six-digit number known only to the taxpayer and the IRS. It helps the IRS verify the taxpayer’s identity when a federal tax return is filed. An IP PIN is valid for one calendar year, and a new number is generated each year. Tax professionals cannot obtain an IP PIN on behalf of clients; taxpayers must obtain their own. Taxpayers may opt in by visiting the IRS Get an Identity Protection PIN on IRS.gov. Confirmed victims of tax-related identity theft automatically receive a new IP PIN each year. IP PIN users should never share their number with anyone but the IRS and their trusted tax preparation provider. The IRS will never call, email, or text to request an IP PIN. IRS Online Account and Tax Pro Account The IRS encourages taxpayers to create an IRS Online Account to securely view their tax account information and to help protect against identity theft and fraud. Creating secure IRS accounts helps prevent fraudsters from creating accounts in taxpayers’ or tax professionals’ names. IRS Online Account is available to anyone who can verify their identity. Tax professionals can encourage clients to use IRS Online Account and use Tax Pro Account to submit power of attorney and tax information authorization requests, manage active authorizations, and access eligible client information. Security Summit and the Nationwide Tax Forums The “ Protect Your Clients, Protect Yourself \" summer series is part of an annual education effort by the Security Summit . Since 2015, the public-private partnership has worked to protect the tax system against tax-related identity theft and fraud. In addition to the five-part series, tax professional security is a key focus of the 2026 IRS Nationwide Tax Forum . The final forum is Sept. 15 -17 in San Diego. For dates, registration, and program details, visit IRS Nationwide Tax Forum . News items may not be updated after their release. Please verify the date before relying on the language. Share Facebook Twitter Linkedin Print",
+  "headings": [
+    "Security Summit: Strengthen defenses against tax identity theft",
+    "Multifactor authentication, IP PINs, and secure online accounts add layers of protection",
+    "More In News",
+    "What tax pros should know about MFA",
+    "IP PINs help protect tax returns",
+    "IRS Online Account and Tax Pro Account",
+    "Security Summit and the Nationwide Tax Forums"
+  ],
+  "links": [
+    "https://www.irs.gov/newsroom/security-summit-strengthen-defenses-against-tax-identity-theft",
+    "https://www.irs.gov/newsroom/security-summit-strengthen-defenses-against-tax-identity-theft",
+    "https://www.irs.gov/zh-hans/newsroom/security-summit-strengthen-defenses-against-tax-identity-theft",
+    "https://www.irs.gov/newsroom/working-families-tax-cuts",
+    "https://www.irs.gov/newsroom/news-releases-for-current-month",
+    "https://www.irs.gov/newsroom/news-releases-for-frequently-asked-questions",
+    "https://www.irs.gov/newsroom/tax-relief-in-disaster-situations",
+    "https://www.irs.gov/newsroom/topics-in-the-news",
+    "https://www.irs.gov/newsroom/fact-sheets",
+    "https://www.irs.gov/newsroom/irs-statements-and-announcements",
+    "https://www.irs.gov/newsroom/irs-tax-tips",
+    "https://www.irs.gov/newsroom/irs-guidance",
+    "https://www.irs.gov/newsroom/multimedia-center",
+    "https://www.irs.gov/newsroom/tax-articles-to-share",
+    "https://www.irs.gov/newsroom/posters-to-share",
+    "https://www.irs.gov/identity-theft-fraud-scams/get-an-identity-protection-pin",
+    "https://www.irs.gov/identity-theft-fraud-scams/get-an-identity-protection-pin",
+    "https://www.irs.gov/payments/online-account-for-individuals",
+    "https://www.irs.gov/tax-professionals/tax-pro-account",
+    "https://www.irs.gov/tax-professionals/protect-your-clients-protect-yourself",
+    "https://www.irs.gov/newsroom/security-summit",
+    "https://www.irs.gov/newsroom/security-summit-strengthen-defenses-against-tax-identity-theft"
+  ],
+  "fetched_at": "2026-09-22T14:44:24.271924+00:00",
+  "low_quality": false,
+  "text_sha256": "714d045ba56252c4c7a8df276671b48a15448767a51d71b833cd62c7645967c5"
+}

@@ -1,0 +1,36 @@
+{
+  "url": "https://www.irs.gov/faqs/irs-procedures/refund-inquiries/refund-inquiries-18",
+  "title": "Refund Inquiries 18 | Internal Revenue Service",
+  "lang": "en",
+  "text": "Skip to main content English Español More In Help Interactive Tax Assistant Tools Report fraud Tax scams Identity theft Notices and letters Appeals Frequently asked questions Accessibility Contact your local IRS office Contact an international IRS office Tax topics Other languages Question What should I do if I entered an incorrect routing or account number for direct deposit of my refund? Answer The IRS assumes no responsibility for tax preparer or taxpayer error. Please verify your account and routing numbers with your financial institution and double check the accuracy of the numbers you enter on your return prior to signing and submitting it. You should not request a deposit of your refund into an account that's not in your own name. The IRS handles account or routing number errors the same for both split refunds and regular direct deposits. Scenario: You omit a digit in the account or routing number of an account and the number doesn't pass the IRS's validation check. In this case, the IRS will send you a notice providing more information. You incorrectly enter an account or routing number, and the number passes the validation check, but your designated financial institution rejects and returns the deposit to the IRS. Once the IRS receives the refund back, the IRS will issue you a notice providing more information. You incorrectly enter an account or routing number that belongs to someone else, and your designated financial institution accepts the deposit. You must work directly with the respective financial institution to recover your funds. See the last solution bullet below. You requested a Refund Anticipation Loan (RAL) or Refund Anticipation Check (RAC) through your preparer or preparation software. Usually this occurs when you authorize the fee for preparation to be taken from your refund. Even if you didn't request a direct deposit, these types of refunds are directly deposited into the preparer’s financial institution, so you should contact that institution for resolution. See the last solution bullet below. Solution: If the return hasn't already posted to our system, you can ask us to stop the direct deposit. You may call us toll-free at 800-829-1040 , M - F, 7 a.m. - 7 p.m. Generally, if the financial institution recovers the funds and returns them to the IRS, the IRS will send you a notice providing the next steps. If you have contacted the financial institution and 5 calendar days have passed with no deposit, you will need to file Form 3911, Taxpayer Statement Regarding Refund PDF to initiate a trace. This allows the IRS to contact the bank on your behalf to attempt recovery of your refund. Banks are allowed up to 90 days from the date of the initial trace input to respond to our request for information, but it may take up to 120 days for resolution. If funds aren't available or the bank refuses to return the funds, the IRS cannot compel the bank to do so. The case may then become a civil matter between you and the financial institution and/or the owner of the account into which the funds were deposited. Category IRS procedures Sub-Category Refund inquiries Page Last Reviewed or Updated: 12-Mar-2026 Share Facebook Twitter Linkedin Print",
+  "headings": [
+    "More In Help",
+    "Scenario:",
+    "Solution:"
+  ],
+  "links": [
+    "https://www.irs.gov/faqs/irs-procedures/refund-inquiries/refund-inquiries-18",
+    "https://www.irs.gov/faqs/irs-procedures/refund-inquiries/refund-inquiries-18",
+    "https://www.irs.gov/es/faqs/irs-procedures/refund-inquiries/refund-inquiries-18",
+    "https://www.irs.gov/help/ita",
+    "https://www.irs.gov/help/tools",
+    "https://www.irs.gov/help/report-fraud",
+    "https://www.irs.gov/help/tax-scams",
+    "https://www.irs.gov/identity-theft-central",
+    "https://www.irs.gov/individuals/understanding-your-irs-notice-or-letter",
+    "https://www.irs.gov/independent-office-of-appeals",
+    "https://www.irs.gov/faqs",
+    "https://www.irs.gov/accessibility",
+    "https://www.irs.gov/help/contact-your-local-irs-office",
+    "https://www.irs.gov/help/contact-my-local-office-internationally",
+    "https://www.irs.gov/taxtopics",
+    "https://www.irs.gov/help/languages",
+    "https://www.irs.gov/pub/irs-pdf/f3911.pdf",
+    "https://www.irs.gov/faqs/irs-procedures",
+    "https://www.irs.gov/faqs/irs-procedures/refund-inquiries",
+    "https://www.irs.gov/faqs/irs-procedures/refund-inquiries/refund-inquiries-18"
+  ],
+  "fetched_at": "2026-09-22T15:03:21.748933+00:00",
+  "low_quality": false,
+  "text_sha256": "15532f73ae9b21611863557e72c7c8b0196e24a344c37a70fd84e3d2ca2a78a7"
+}

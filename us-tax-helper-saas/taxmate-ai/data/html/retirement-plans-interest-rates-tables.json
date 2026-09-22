@@ -1,0 +1,39 @@
+{
+  "url": "https://www.irs.gov/retirement-plans/interest-rates-tables",
+  "title": "Interest rates tables | Internal Revenue Service",
+  "lang": "en",
+  "text": "Skip to main content Interest rates tables More In Retirement Plans IRAs Types of retirement plans Required minimum distributions Published guidance Forms and publications Operate a retirement plan News Topic index Weighted average interest rate table This table provides the monthly weighted average interest rates and the monthly rates of 30-year Treasury securities. Composite corporate bond rate table This table provides the monthly corporate bond weighted average interest rates and the monthly composite corporate bond interest rates. Funding yield curve segment rate tables This table provides the 25-year average segment rates and the monthly values for the 24-month average segment rates as required for funding purposes under section 430(h)(2) of the Internal Revenue Code. Minimum present value segment rate table This table provides the monthly segment rates for purposes of determining minimum present values under section 417(e)(3)(D) of the Internal Revenue Code. Monthly yield curve tables These spreadsheets provide the monthly yield curves computed under section 430(h)(2) of the Code. An election under section 430(h)(2)(D)(ii) of the Code may be made to use these yield curves for minimum funding requirements in place of the funding segment rates. Recent interest rate notices Published guidance containing updates for the corporate bond weighted average interest rates, 24-month average segment rates, funding segment rates, and the minimum present value segment rates. Scale MP-2021 Rates PDF This document provides the mortality improvement rates used to update the mortality tables under section 430(h) of the Code for valuation dates occurring during 2023, which are used for calculations under section 430 of the Code. Page Last Reviewed or Updated: 06-Jun-2026 Share Facebook Twitter Linkedin Print",
+  "headings": [
+    "Interest rates tables",
+    "Weighted average interest rate table",
+    "Composite corporate bond rate table",
+    "Funding yield curve segment rate tables",
+    "Minimum present value segment rate table",
+    "Monthly yield curve tables",
+    "Recent interest rate notices",
+    "Scale MP-2021 RatesPDF",
+    "More In Retirement Plans"
+  ],
+  "links": [
+    "https://www.irs.gov/retirement-plans/interest-rates-tables",
+    "https://www.irs.gov/retirement-plans/individual-retirement-arrangements-iras",
+    "https://www.irs.gov/retirement-plans/plan-sponsor/types-of-retirement-plans",
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-required-minimum-distributions-rmds",
+    "https://www.irs.gov/retirement-plans/published-guidance",
+    "https://www.irs.gov/retirement-plans/retirement-plan-forms-and-publications",
+    "https://www.irs.gov/retirement-plans/operate-a-retirement-plan",
+    "https://www.irs.gov/retirement-plans/newsletters",
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics",
+    "https://www.irs.gov/retirement-plans/weighted-average-interest-rate-table",
+    "https://www.irs.gov/retirement-plans/composite-corporate-bond-rate-table",
+    "https://www.irs.gov/retirement-plans/pension-plan-funding-segment-rates",
+    "https://www.irs.gov/retirement-plans/minimum-present-value-segment-rates",
+    "https://www.irs.gov/retirement-plans/monthly-yield-curve-tables",
+    "https://www.irs.gov/retirement-plans/recent-interest-rate-notices",
+    "https://www.irs.gov/pub/irs-tege/mp-2021-mortality-improvement-rates.pdf",
+    "https://www.irs.gov/retirement-plans/interest-rates-tables"
+  ],
+  "fetched_at": "2026-09-22T15:20:55.528486+00:00",
+  "low_quality": false,
+  "text_sha256": "49b276d09a6f3e9371a6d8527adfc3e5fc83624c2ea0924fcf1794e62ddcdb9e"
+}

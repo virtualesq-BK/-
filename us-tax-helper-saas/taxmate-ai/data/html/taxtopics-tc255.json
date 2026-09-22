@@ -1,0 +1,42 @@
+{
+  "url": "https://www.irs.gov/taxtopics/tc255",
+  "title": "Topic no. 255, Signing your return electronically | Internal Revenue Service",
+  "lang": "en",
+  "text": "Skip to main content Topic no. 255, Signing your return electronically English Español 中文 (繁體) 한국어 Русский Tiếng Việt More In Help Interactive Tax Assistant Tools Report fraud Tax scams Identity theft Notices and letters Appeals Frequently asked questions Accessibility Contact your local IRS office Contact an international IRS office Tax topics Other languages When you file your individual tax return electronically, you must electronically sign the tax return with a personal identification number (PIN) using the self-select PIN or the practitioner PIN method. Self-select PIN - The self-select PIN (SSP) method requires you to select a five-digit PIN that can be any five numbers (except all zeros) that you choose which serves as your electronic signature. As a part of the electronic signature, you must also enter your date of birth and either your original prior year adjusted gross income (AGI) or your prior year SSP. If you file a joint return, each spouse needs to enter their own SSP to sign the return. If you have an Identity Protection (IP) PIN, you must enter it when prompted by your software. It will serve to verify your identity instead of your prior-year AGI or prior-year SSP. Practitioner PIN - The practitioner PIN method is another signature option in which you authorize your tax practitioner to enter or generate your PIN. This method doesn't require you to provide your prior year AGI or SSP for authentication. You must give the tax professional a signed authorization form, Form 8879, IRS e-file Signature Authorization . Similar to the SSP, you can use any five digits (except for all zeros) when selecting your PIN. Additional considerations Primary taxpayers under age 16 who have never filed an individual return and secondary taxpayers under age 16 who didn't file for 2024 are ineligible to use the SSP method to sign the electronic return using tax preparation software. These individuals may still e-file by using a paid preparer who uses the practitioner PIN method. There are no age restrictions when using the practitioner PIN method. Generally, you may e-file your tax return even if you're required to submit certain paper forms or supporting documents. Use Form 8453, U.S. Individual Income Tax Transmittal for an IRS e-file Return to transmit required paper forms or supporting paper documents. The IRS advises keeping a copy of your tax return and Form 8879 for your records. It may assist with electronically signing your next year's e-file return. If you need a copy or a transcript of your return, refer to Topic no. 156 for assistance. Refer to Self-select PIN method for Forms 1040 and 4868 Modernized e-File (MeF) for additional considerations. Page Last Reviewed or Updated: 24-Feb-2026 Share Facebook Twitter Linkedin Print",
+  "headings": [
+    "Topic no. 255, Signing your return electronically",
+    "Additional considerations",
+    "More In Help"
+  ],
+  "links": [
+    "https://www.irs.gov/taxtopics/tc255",
+    "https://www.irs.gov/taxtopics/tc255",
+    "https://www.irs.gov/es/taxtopics/tc255",
+    "https://www.irs.gov/zh-hant/taxtopics/tc255",
+    "https://www.irs.gov/ko/taxtopics/tc255",
+    "https://www.irs.gov/ru/taxtopics/tc255",
+    "https://www.irs.gov/vi/taxtopics/tc255",
+    "https://www.irs.gov/help/ita",
+    "https://www.irs.gov/help/tools",
+    "https://www.irs.gov/help/report-fraud",
+    "https://www.irs.gov/help/tax-scams",
+    "https://www.irs.gov/identity-theft-central",
+    "https://www.irs.gov/individuals/understanding-your-irs-notice-or-letter",
+    "https://www.irs.gov/independent-office-of-appeals",
+    "https://www.irs.gov/faqs",
+    "https://www.irs.gov/accessibility",
+    "https://www.irs.gov/help/contact-your-local-irs-office",
+    "https://www.irs.gov/help/contact-my-local-office-internationally",
+    "https://www.irs.gov/taxtopics",
+    "https://www.irs.gov/help/languages",
+    "https://www.irs.gov/individuals/validating-your-electronically-filed-tax-return",
+    "https://www.irs.gov/forms-pubs/about-form-8879",
+    "https://www.irs.gov/forms-pubs/about-form-8453",
+    "https://www.irs.gov/taxtopics/tc156",
+    "https://www.irs.gov/e-file-providers/self-select-pin-method-for-forms-1040-and-4868-modernized-e-file-mef",
+    "https://www.irs.gov/taxtopics/tc255"
+  ],
+  "fetched_at": "2026-09-22T14:51:45.202917+00:00",
+  "low_quality": false,
+  "text_sha256": "5f31da71bc1152e3ec5136f3842324aabdaebead046d46248c8c90ccc2230ee0"
+}

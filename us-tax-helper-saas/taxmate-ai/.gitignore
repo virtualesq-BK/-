@@ -1,0 +1,50 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# local vector store & IRS PDF cache
+/data/irs-vector-store.json
+/data/irs-pdfs/
+
+# misc
+.DS_Store
+*.pem
+
+# crawler run logs (crawled data itself is kept under data/)
+crawl.log
+crawl_stdout.log
+crawler/__pycache__/
+crawler/.venv/
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# env files (keep .env.production as template; set real values in Vercel only)
+.env
+.env*.local
+!.env.production
+!.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# prisma
+/prisma/migrations/**/migration_lock.toml

@@ -1,0 +1,436 @@
+// TaxMate AI — Phase 1 Database Schema
+// User: 자영업자(USER) 또는 CPA 역할
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Enums
+// ─────────────────────────────────────────────────────────────────────────────
+
+enum UserRole {
+  USER
+  CPA
+}
+
+enum ProfileBusinessType {
+  LLC
+  SoleProp
+  SCorp
+  Partnership
+}
+
+enum TaxDocumentType {
+  W2
+  NEC1099   // 1099-NEC
+  K1099     // 1099-K
+  Receipt
+  Other
+}
+
+enum TaxDocumentStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  FAILED
+}
+
+enum TaxReturnStatus {
+  DRAFT
+  AI_REVIEW
+  CPA_REVIEW
+  COMPLETED
+  FILED
+  REJECTED
+}
+
+enum MessageRole {
+  USER
+  AI
+  CPA
+}
+
+enum PaymentStatus {
+  PENDING
+  COMPLETED
+  REFUNDED
+  SCHEDULED
+}
+
+enum CpaMatchStatus {
+  PENDING
+  ACCEPTED
+  DECLINED
+  EXPIRED
+}
+
+enum EfileStatus {
+  NOT_SUBMITTED
+  PENDING
+  ACCEPTED
+  REJECTED
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// User (자영업자 + CPA 통합)
+// ─────────────────────────────────────────────────────────────────────────────
+
+model User {
+  id               String    @id @default(cuid())
+  email            String    @unique
+  name             String?
+  image            String?
+  emailVerified    DateTime?
+  role             UserRole  @default(USER)
+  stripeCustomerId String?   @unique
+
+  // CPA 전용 필드 (role = CPA 일 때 사용)
+  cpaLicenseNumber String?
+  cpaFirmName      String?
+  cpaBio           String?   @db.Text
+  hourlyRate             Decimal? @db.Decimal(10, 2)
+  isVerified             Boolean  @default(false)
+  cpaState               String?
+  cpaSpecialties         String[] @default([])
+  cpaRating              Float    @default(5.0)
+  cpaReviewCount         Int      @default(0)
+  cpaAvgResponseMin      Int      @default(15)
+  stripeConnectAccountId String?  @unique
+
+  // 온보딩 & 설정 (Phase 5)
+  onboardingProgress    Json?
+  onboardingCompletedAt DateTime?
+  notificationSettings  Json?
+  subscriptionTier      String   @default("FREE")
+  phone                 String?
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  deletedAt DateTime?
+
+  // NextAuth
+  accounts Account[]
+  sessions Session[]
+
+  // Domain relations
+  businessProfiles   BusinessProfile[]
+  taxDocuments       TaxDocument[]
+  taxReturns         TaxReturn[]           @relation("TaxReturnOwner")
+  assignedTaxReturns TaxReturn[]           @relation("AssignedCpa")
+  messages           Message[]
+  auditRiskScores    AuditRiskScore[]
+  paymentsAsUser     PaymentTransaction[] @relation("PayerUser")
+  paymentsAsCpa      PaymentTransaction[] @relation("CpaPayment")
+  cpaMatchRequests   CpaMatchRequest[]    @relation("MatchUser")
+  cpaMatchesAssigned CpaMatchRequest[]    @relation("MatchCpa")
+  notifications      Notification[]
+  aiFeedbacks        AiFeedback[]
+
+  @@index([email])
+  @@index([cpaState])
+  @@index([role])
+  @@index([deletedAt])
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// AiFeedback (AI 응답 품질 추적)
+// ─────────────────────────────────────────────────────────────────────────────
+
+model AiFeedback {
+  id         String   @id @default(cuid())
+  userId     String
+  rating     Int
+  helpful    Boolean?
+  comment    String?  @db.Text
+  context    String?
+  metadata   Json?
+  createdAt  DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([createdAt])
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Notification (앱 내 알림)
+// ─────────────────────────────────────────────────────────────────────────────
+
+model Notification {
+  id        String   @id @default(cuid())
+  userId    String
+  type      String
+  title     String
+  body      String   @db.Text
+  read      Boolean  @default(false)
+  metadata  Json?
+
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([read])
+  @@index([createdAt])
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// BusinessProfile (자영업자 사업 정보)
+// ─────────────────────────────────────────────────────────────────────────────
+
+model BusinessProfile {
+  id             String              @id @default(cuid())
+  userId         String
+  businessName   String
+  businessType   ProfileBusinessType
+  ein            String?
+  industry       String?
+  annualRevenue     Decimal? @db.Decimal(14, 2)
+  employeeCount     Int      @default(0)
+  address           String?
+  city              String?
+  state             String?
+  zipCode           String?
+  /// Schedule C 준비용 AI 집계 (lib/ai/aggregateIncome.ts)
+  incomeSummary     Json?
+  deductibleSummary Json?
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  deletedAt DateTime?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([deletedAt])
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// TaxDocument
+// ─────────────────────────────────────────────────────────────────────────────
+
+model TaxDocument {
+  id              String            @id @default(cuid())
+  userId          String
+  documentType    TaxDocumentType
+  fileUrl         String
+  fileName        String
+  fileSize        Int
+  uploadDate      DateTime          @default(now())
+  aiExtractedData Json?
+  status          TaxDocumentStatus @default(PENDING)
+  taxYear         Int
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  deletedAt DateTime?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([taxYear])
+  @@index([status])
+  @@index([deletedAt])
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// TaxReturn
+// ─────────────────────────────────────────────────────────────────────────────
+
+model TaxReturn {
+  id                 String          @id @default(cuid())
+  userId             String
+  assignedCpaId      String?
+  taxYear            Int
+  status             TaxReturnStatus @default(DRAFT)
+  aiGeneratedData    Json?
+  cpaModifications   Json?
+  finalReturnFileUrl String?
+  filingDate          DateTime?
+  irsSubmissionId     String?
+  reviewStartedAt     DateTime?
+  reviewCompletedAt   DateTime?
+  cpaCompensation     Decimal?    @db.Decimal(10, 2)
+  efileStatus         EfileStatus @default(NOT_SUBMITTED)
+  efileBatchId        String?
+  form8879            Json?
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  deletedAt DateTime?
+
+  user        User  @relation("TaxReturnOwner", fields: [userId], references: [id], onDelete: Cascade)
+  assignedCpa User? @relation("AssignedCpa", fields: [assignedCpaId], references: [id], onDelete: SetNull)
+
+  messages        Message[]
+  auditRiskScores AuditRiskScore[]
+  cpaMatchRequest CpaMatchRequest?
+
+  @@unique([userId, taxYear])
+  @@index([userId])
+  @@index([assignedCpaId])
+  @@index([taxYear])
+  @@index([status])
+  @@index([deletedAt])
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Message (챗봇 / CPA 대화)
+// ─────────────────────────────────────────────────────────────────────────────
+
+model Message {
+  id          String      @id @default(cuid())
+  userId      String
+  role        MessageRole
+  content     String      @db.Text
+  taxReturnId String?
+  metadata    Json?
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  deletedAt DateTime?
+
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  taxReturn TaxReturn? @relation(fields: [taxReturnId], references: [id], onDelete: SetNull)
+
+  @@index([userId])
+  @@index([taxReturnId])
+  @@index([deletedAt])
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// AuditRiskScore
+// ─────────────────────────────────────────────────────────────────────────────
+
+model AuditRiskScore {
+  id                    String @id @default(cuid())
+  userId                String
+  taxReturnId           String
+  overallScore          Int    // 0–100
+  riskFactors           Json
+  mitigationSuggestions Json
+  generatedAt           DateTime @default(now())
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  deletedAt DateTime?
+
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  taxReturn TaxReturn @relation(fields: [taxReturnId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([taxReturnId])
+  @@index([deletedAt])
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// CpaMatchRequest
+// ─────────────────────────────────────────────────────────────────────────────
+
+model CpaMatchRequest {
+  id          String         @id @default(cuid())
+  taxReturnId String         @unique
+  userId      String
+  cpaId       String?
+  status      CpaMatchStatus @default(PENDING)
+  matchScore  Float?
+  complexity  String?
+  userState   String?
+  industry    String?
+  createdAt   DateTime       @default(now())
+  notifiedAt  DateTime?
+  acceptedAt  DateTime?
+  declinedAt  DateTime?
+
+  taxReturn TaxReturn @relation(fields: [taxReturnId], references: [id], onDelete: Cascade)
+  user      User      @relation("MatchUser", fields: [userId], references: [id], onDelete: Cascade)
+  cpa       User?     @relation("MatchCpa", fields: [cpaId], references: [id], onDelete: SetNull)
+
+  @@index([userId])
+  @@index([cpaId])
+  @@index([status])
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// PaymentTransaction
+// ─────────────────────────────────────────────────────────────────────────────
+
+model PaymentTransaction {
+  id                    String        @id @default(cuid())
+  userId                String
+  cpaId                 String?
+  taxReturnId           String?
+  amount                Decimal       @db.Decimal(10, 2)
+  currency              String        @default("usd")
+  status                PaymentStatus @default(PENDING)
+  stripePaymentIntentId String?       @unique
+  stripeTransferId      String?
+  description           String?
+  cpaShareAmount        Decimal?      @db.Decimal(10, 2)
+  platformShareAmount   Decimal?      @db.Decimal(10, 2)
+  payoutScheduledAt     DateTime?
+  payoutCompletedAt     DateTime?
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  deletedAt DateTime?
+
+  user User  @relation("PayerUser", fields: [userId], references: [id], onDelete: Cascade)
+  cpa  User? @relation("CpaPayment", fields: [cpaId], references: [id], onDelete: SetNull)
+
+  @@index([userId])
+  @@index([cpaId])
+  @@index([taxReturnId])
+  @@index([status])
+  @@index([deletedAt])
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// NextAuth (Prisma Adapter)
+// ─────────────────────────────────────────────────────────────────────────────
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}

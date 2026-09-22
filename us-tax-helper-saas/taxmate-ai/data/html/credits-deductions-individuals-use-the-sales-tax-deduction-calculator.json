@@ -1,0 +1,36 @@
+{
+  "url": "https://www.irs.gov/credits-deductions/individuals/use-the-sales-tax-deduction-calculator",
+  "title": "Use the Sales Tax Deduction Calculator | Internal Revenue Service",
+  "lang": "en",
+  "text": "Skip to main content Use the Sales Tax Deduction Calculator English Español 中文 (简体) 中文 (繁體) 한국어 Русский Tiếng Việt Kreyòl ayisyen More In Credits & Deductions Family, dependents and students Clean energy and vehicle credits and deductions Individuals credits and deductions Business credits and deductions The Sales Tax Deduction Calculator helps you figure the amount of state and local general sales tax you can claim when you itemize deductions on Schedule A (Forms 1040 or 1040-SR) . Your total deduction for state and local income, sales and property taxes is limited to a combined, total deduction of $10,000 ($5,000 if married filing separately). How it works Enter your information for the tax year: Filing status Sales tax paid on specified large purchases Income Dependents claimed What you need Have this information ready: W-2, 1099 or other income statements Receipts for specified large purchases ZIP code of your address and dates lived Use the Sales Tax Deduction Calculator Your security and privacy The Sales Tax Deduction Calculator does not ask for your personal information such as your name, address, Social Security number or bank account numbers. The information you enter will not be saved or recorded. Accessibility Find features and issues in Sales Tax Deduction Calculator Accessibility . Frequently asked questions I made a local move (within the same state and ZIP code). Do I need to enter it in the Sales Tax Deduction Calculator? Not if you’re certain you stayed within the same local taxing jurisdiction. If you aren’t sure, enter both locations. Many ZIP codes have more than one local taxing jurisdiction. If you changed your city or county of residence (even within the same ZIP code), then enter your new residence separately in the calculator. The calculator will give the correct answer whether or not the two locations have different sales tax rates. Does the Sales Tax Deduction Calculator use a methodology that differs from the worksheet in the Schedule A instructions? No. But the calculator has local sales tax rate information. This is not contained in the paper instructions. It also does the math for you. Why is this methodology called “optional”? Because it is in lieu of your having to add all of your general sales tax payments from your receipts, which you are always entitled to do. Why aren’t the “specified items” already accounted for in the tables, etc.? These “big ticket” items are generally not purchased every year. If an average annual amount were included in the tables for these purchases, then taxpayers would be able to get double benefit for them: using their actual receipts in years when they purchased such items, but using the tables in all other years. As a result, the law provides for such items to be accounted for outside of the tables entirely. Why are there different methodologies for determining my local optional sales tax deduction, depending on my state or locality? There are two key features of a general sales tax: What is taxed (the tax base), and how much it is taxed (the tax rate). Among states that have local sales taxes, these two features create three basic categories: When the local tax base is the same as the state tax base and there is just one local sales tax rate throughout the state – The local sales tax amount can be included with the state table using a combined rate on the same items. When the local tax base is the same as the state tax base, but the local sales tax rates vary throughout the state - The local sales tax amount can be derived from the state amount using the ratio of the local rate to the state rate. When both the local tax bases and the local sales tax rates vary throughout the state - The local sales tax amount must be derived independently from the state amount. Why is the local tax rate averaged in my locality? The deduction for state and local general sales tax is meant to be the amount of sales tax you actually paid. Rather than require you to keep all of your receipts, the tax law allows you to use the optional sales tax tables provided by the IRS. This lets you approximate your sales tax payments using average consumption patterns, taking into account the relevant tax rates and your income and family size. If a locality (defined as a state-county-ZIP code combination) has more than one taxing district, the calculator uses the average of the local sales tax rates among those districts to estimate the amount of sales tax the average taxpayer in that locality actually paid. This assumes residents purchase taxable items throughout the locality, not just in the taxing jurisdiction where they reside. For example: If there are two tax districts within a locality, with local tax rates of 1% and 2%, then the calculator uses 1.5%, which is the average of the two local tax rates. The average provides a much more accurate estimate of the sales tax actually paid by taxpayers in localities with multiple taxing districts. Page Last Reviewed or Updated: 01-Jul-2026 Share Facebook Twitter Linkedin Print",
+  "headings": [
+    "Use the Sales Tax Deduction Calculator",
+    "How it works",
+    "What you need",
+    "Your security and privacy",
+    "Accessibility",
+    "Frequently asked questions",
+    "More In Credits & Deductions"
+  ],
+  "links": [
+    "https://www.irs.gov/credits-deductions/individuals/use-the-sales-tax-deduction-calculator",
+    "https://www.irs.gov/credits-deductions/individuals/use-the-sales-tax-deduction-calculator",
+    "https://www.irs.gov/es/credits-deductions/individuals/use-the-sales-tax-deduction-calculator",
+    "https://www.irs.gov/zh-hans/credits-deductions/individuals/use-the-sales-tax-deduction-calculator",
+    "https://www.irs.gov/zh-hant/credits-deductions/individuals/use-the-sales-tax-deduction-calculator",
+    "https://www.irs.gov/ko/credits-deductions/individuals/use-the-sales-tax-deduction-calculator",
+    "https://www.irs.gov/ru/credits-deductions/individuals/use-the-sales-tax-deduction-calculator",
+    "https://www.irs.gov/vi/credits-deductions/individuals/use-the-sales-tax-deduction-calculator",
+    "https://www.irs.gov/ht/credits-deductions/individuals/use-the-sales-tax-deduction-calculator",
+    "https://www.irs.gov/credits-deductions/family-dependents-and-students-credits",
+    "https://www.irs.gov/credits-deductions/clean-vehicle-and-energy-credits",
+    "https://www.irs.gov/credits-and-deductions-for-individuals",
+    "https://www.irs.gov/credits-deductions/businesses",
+    "https://www.irs.gov/forms-pubs/about-schedule-a-form-1040",
+    "https://www.irs.gov/credits-deductions/individuals/sales-tax-deduction-calculator-accessibility",
+    "https://www.irs.gov/credits-deductions/individuals/use-the-sales-tax-deduction-calculator"
+  ],
+  "fetched_at": "2026-09-22T14:46:32.217307+00:00",
+  "low_quality": false,
+  "text_sha256": "d1b1f9d902b51ee2d6bba7ee89d9e33a061f3f0c874523b4b739654d89019569"
+}

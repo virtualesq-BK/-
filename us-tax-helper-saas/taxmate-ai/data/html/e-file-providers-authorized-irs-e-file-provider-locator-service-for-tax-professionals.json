@@ -1,0 +1,39 @@
+{
+  "url": "https://www.irs.gov/e-file-providers/authorized-irs-e-file-provider-locator-service-for-tax-professionals",
+  "title": "Authorized IRS e-file provider locator service for tax professionals | Internal Revenue Service",
+  "lang": "en",
+  "text": "Skip to main content Authorized IRS e-file provider locator service for tax professionals More In Tax Pros Enrolled agents Annual Filing Season Program participants Enrolled retirement plan agents Certified Professional Employer Organization (CPEO) EITC central Enrolled actuaries E-file providers Modernized e-File Modernized e-File status Become an authorized e-file provider Authorized IRS E-file Provider Locator Service QuickAlerts Electronic filing options for business and self-employed taxpayers Modernized e-File forms Approved IRS Modernized e-File business providers About the database and locator service The \"authorized IRS e-file provider\" database is a nationwide listing of all businesses which have been accepted to participate in the electronic filing (IRS e-file) program. \"For Profit\" providers that have \"opted in\" are included in the locator service which allows you to: Identify and locate different types of authorized IRS e-file providers through interactive searches - e.g., Electronic Return Originators (EROs), transmitters, software developers, and intermediate service providers. Download delimited text files by state or District of Columbia for creating mailing lists using data base software packages. See \"Downloading delimited text files\" below. To opt in or out of the locator service, see \"Updating the authorized IRS e-file application\" below. How to search for a provider This interactive search allows you to enter the either your full 5 digit ZIP Code, or select your state. Search results will be sorted in alphabetical order by the business name. Use the arrow at the bottom right of the page to advance to the next page. Note: The inclusion in this database does not constitute any endorsement by the IRS of the e-file providers listed in this database or any of the products or services that they provide. You should always be sure to conduct your own due diligence when selecting an e-file provider. Authorized IRS e-file Providers Welcome to the e-file Provider Search Tool, which allows you to find an e-file provider in your area. You may either enter your zip code or select a state. Downloading comma delimited text files Information about each provider is stored in the database as a long string of text or a \"record\" with each element of the record separated by a delimiter (e.g., \"IRS\"|\"1111 Constitution Ave NW\"|). The delimited text files contain \"records\" grouped by state or the District of Columbia. These text files can be imported into database software packages and used to create mailing lists. Updating the authorized IRS e-file application The IRS e-file application is available through the Internet-based business tools called e-services . Existing IRS e-file participants can also use it to update their application to opt in or out of the locator service. This is done by selecting \"yes\" or \"no\" on the Firm Information page of the application. Page Last Reviewed or Updated: 06-Aug-2026 Share Facebook Twitter Linkedin Print",
+  "headings": [
+    "Authorized IRS e-file provider locator service for tax professionals",
+    "About the database and locator service",
+    "How to search for a provider",
+    "Authorized IRS e-file Providers",
+    "Downloading comma delimited text files",
+    "Updating the authorized IRS e-file application",
+    "More In Tax Pros"
+  ],
+  "links": [
+    "https://www.irs.gov/e-file-providers/authorized-irs-e-file-provider-locator-service-for-tax-professionals",
+    "https://www.irs.gov/tax-professionals/enrolled-agents",
+    "https://www.irs.gov/tax-professionals/annual-filing-season-program",
+    "https://www.irs.gov/tax-professionals/enrolled-retirement-plan-agent-program",
+    "https://www.irs.gov/tax-professionals/certified-professional-employer-organization",
+    "https://www.irs.gov/tax-professionals/eitc-central",
+    "https://www.irs.gov/tax-professionals/enrolled-actuaries",
+    "https://www.irs.gov/e-file-providers/e-file-for-tax-professionals",
+    "https://www.irs.gov/e-file-providers/modernized-e-file-program-information",
+    "https://www.irs.gov/e-file-providers/modernized-e-file-mef-status",
+    "https://www.irs.gov/e-file-providers/become-an-authorized-e-file-provider",
+    "https://www.irs.gov/e-file-providers/authorized-irs-e-file-provider-locator-service-for-tax-professionals",
+    "https://www.irs.gov/e-file-providers/quickalerts-email-updates-on-irs-e-filing-systems",
+    "https://www.irs.gov/e-file-providers/electronic-filing-options-for-business-and-self-employed-taxpayers",
+    "https://www.irs.gov/e-file-providers/modernized-e-file-mef-forms",
+    "https://www.irs.gov/e-file-providers/approved-irs-e-file-for-business-providers",
+    "https://www.irs.gov/e-file-providers/download-delimited-files-by-state-or-district-of-columbia",
+    "https://www.irs.gov/e-services",
+    "https://www.irs.gov/e-file-providers/authorized-irs-e-file-provider-locator-service-for-tax-professionals"
+  ],
+  "fetched_at": "2026-09-22T15:06:18.607541+00:00",
+  "low_quality": false,
+  "text_sha256": "edc2e9ed5c479d700b81a3277675e9ac3699b271a4ef8de9365cf2fdade27121"
+}

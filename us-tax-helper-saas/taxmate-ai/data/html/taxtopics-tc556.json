@@ -1,0 +1,43 @@
+{
+  "url": "https://www.irs.gov/taxtopics/tc556",
+  "title": "Topic no. 556, Alternative Minimum Tax | Internal Revenue Service",
+  "lang": "en",
+  "text": "Skip to main content Topic no. 556, Alternative Minimum Tax English Español 中文 (繁體) 한국어 Русский Tiếng Việt More In Help Interactive Tax Assistant Tools Report fraud Tax scams Identity theft Notices and letters Appeals Frequently asked questions Accessibility Contact your local IRS office Contact an international IRS office Tax topics Other languages Under the tax law, certain tax benefits can significantly reduce a taxpayer's regular tax amount. The alternative minimum tax (AMT) applies to taxpayers with high economic income by setting a limit on those benefits. It helps to ensure that those taxpayers pay at least a minimum amount of tax. How is the AMT calculated? The AMT is the excess of the tentative minimum tax over the regular tax. Thus, the AMT is owed only if the tentative minimum tax for the year is greater than the regular tax for that year. The tentative minimum tax is figured separately from the regular tax. In general, compute the tentative minimum tax by: Computing taxable income eliminating or reducing certain exclusions and deductions, and taking into account differences with respect to when certain items are used to compute regular taxable income and alternative minimum taxable income (AMTI), Subtracting the AMT exemption amount, Multiplying the amount computed in (2) by the appropriate AMT tax rates, and Subtracting the AMT foreign tax credit. The law sets the AMT exemption amounts and AMT tax rates. For AMT capital gains and qualified dividends, taxpayers can use the special capital gain rates in effect for the regular tax if they're lower than the AMT tax rates that would otherwise apply. In addition, some tax credits that reduce regular tax liability don't reduce AMT tax liability. Am I subject to the AMT? To find out if you may be subject to the AMT, refer to the Alternative Minimum Tax (AMT) line instructions in the Instructions for Form 1040 (and Form 1040-SR) . If subject to the AMT, you may be required to complete and attach Form 6251, Alternative Minimum Tax – Individuals . See the Instructions for Form 6251 PDF . Am I eligible for a tax credit? If you're not liable for AMT this year, but you paid AMT in one or more previous years, you may be eligible to take a special minimum tax credit against your regular tax this year. If eligible, you should complete and attach Form 8801, Credit for Prior Year Minimum Tax - Individuals, Estates, and Trusts to claim the minimum tax credit. Page Last Reviewed or Updated: 05-Jun-2026 Share Facebook Twitter Linkedin Print",
+  "headings": [
+    "Topic no. 556, Alternative Minimum Tax",
+    "How is the AMT calculated?",
+    "Am I subject to the AMT?",
+    "Am I eligible for a tax credit?",
+    "More In Help"
+  ],
+  "links": [
+    "https://www.irs.gov/taxtopics/tc556",
+    "https://www.irs.gov/taxtopics/tc556",
+    "https://www.irs.gov/es/taxtopics/tc556",
+    "https://www.irs.gov/zh-hant/taxtopics/tc556",
+    "https://www.irs.gov/ko/taxtopics/tc556",
+    "https://www.irs.gov/ru/taxtopics/tc556",
+    "https://www.irs.gov/vi/taxtopics/tc556",
+    "https://www.irs.gov/help/ita",
+    "https://www.irs.gov/help/tools",
+    "https://www.irs.gov/help/report-fraud",
+    "https://www.irs.gov/help/tax-scams",
+    "https://www.irs.gov/identity-theft-central",
+    "https://www.irs.gov/individuals/understanding-your-irs-notice-or-letter",
+    "https://www.irs.gov/independent-office-of-appeals",
+    "https://www.irs.gov/faqs",
+    "https://www.irs.gov/accessibility",
+    "https://www.irs.gov/help/contact-your-local-irs-office",
+    "https://www.irs.gov/help/contact-my-local-office-internationally",
+    "https://www.irs.gov/taxtopics",
+    "https://www.irs.gov/help/languages",
+    "https://www.irs.gov/forms-pubs/about-form-1040",
+    "https://www.irs.gov/forms-pubs/about-form-6251",
+    "https://www.irs.gov/pub/irs-pdf/i6251.pdf",
+    "https://www.irs.gov/forms-pubs/about-form-8801",
+    "https://www.irs.gov/taxtopics/tc556"
+  ],
+  "fetched_at": "2026-09-22T14:53:29.623621+00:00",
+  "low_quality": false,
+  "text_sha256": "8ef8564ab134aedab640b1959e78883ac5c38e570cb3d41326f661fd0ce34fd1"
+}

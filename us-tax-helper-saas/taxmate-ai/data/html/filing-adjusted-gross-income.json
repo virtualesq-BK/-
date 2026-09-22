@@ -1,0 +1,43 @@
+{
+  "url": "https://www.irs.gov/filing/adjusted-gross-income",
+  "title": "Adjusted gross income | Internal Revenue Service",
+  "lang": "en",
+  "text": "Skip to main content Adjusted gross income English Español 中文 (简体) 中文 (繁體) 한국어 Русский Tiếng Việt Kreyòl ayisyen More In File Individuals Businesses and self-employed Charities and nonprofits International taxpayers Governmental liaisons Federal, state and local governments Indian tribal governments Tax exempt bonds Taxpayer identification numbers (TIN) Adjusted gross income (AGI) is your total (gross) taxable income minus certain items (adjustments). Your modified adjusted gross income (MAGI) is your adjusted gross income with certain deductions added back. You may need your AGI to: File federal and state tax returns Qualify for free filing options, credits and other tax benefits Where to find your AGI Your AGI is on line 11 of Form 1040, U.S. Individual Income Tax Return . To find a prior year AGI, go to your Online Account and select the desired tax year on the Records and Status tab. If you can’t log in to your Online Account or create one, you can request a free tax return transcript for the prior year. For a new return, you can use tax software or calculate the AGI yourself. Add all your taxable income . Put the amount on line 9 of Form 1040 . Subtract any adjustments to income. These come from line 26 of Form 1040 Schedule 1, Additional Income and Adjustments to Income PDF . Put the amount on line 10 of Form 1040. On Form 1040, subtract line 10 from line 9 and put the amount on line 11. This is your adjusted gross income. Example AGI calculation 1. Add up all sources of taxable income, such as: $50,000 wages $12,000 rental income $8,500 part-time wages $500 bond interest The total income is $71,000. Put this amount on line 9 of Form 1040. 2. Add up all adjustments to income (from line 26 of Schedule 1), such as: $250 educator expenses $2,500 student loan interest The total adjustments to income are $2,750. Put this amount on line 10 of Form 1040. 3. Subtract adjustments to income (line 10) from total income (line 9): $71,000 - $2,750 = $68,250 This amount ($68,250) is the adjusted gross income. Put it on line 11 of Form 1040. Page Last Reviewed or Updated: 28-Jun-2026 Share Facebook Twitter Linkedin Print",
+  "headings": [
+    "Adjusted gross income",
+    "Where to find your AGI",
+    "Example AGI calculation",
+    "More In File"
+  ],
+  "links": [
+    "https://www.irs.gov/filing/adjusted-gross-income",
+    "https://www.irs.gov/filing/adjusted-gross-income",
+    "https://www.irs.gov/es/filing/adjusted-gross-income",
+    "https://www.irs.gov/zh-hans/filing/adjusted-gross-income",
+    "https://www.irs.gov/zh-hant/filing/adjusted-gross-income",
+    "https://www.irs.gov/ko/filing/adjusted-gross-income",
+    "https://www.irs.gov/ru/filing/adjusted-gross-income",
+    "https://www.irs.gov/vi/filing/adjusted-gross-income",
+    "https://www.irs.gov/ht/filing/adjusted-gross-income",
+    "https://www.irs.gov/individual-tax-filing",
+    "https://www.irs.gov/businesses",
+    "https://www.irs.gov/charities-and-nonprofits",
+    "https://www.irs.gov/individuals/international-taxpayers",
+    "https://www.irs.gov/government-entities/governmental-liaisons",
+    "https://www.irs.gov/government-entities/federal-state-local-governments",
+    "https://www.irs.gov/government-entities/indian-tribal-governments",
+    "https://www.irs.gov/tax-exempt-bonds",
+    "https://www.irs.gov/tin/taxpayer-identification-numbers-tin",
+    "https://www.irs.gov/credits-deductions/modified-adjusted-gross-income",
+    "https://www.irs.gov/forms-pubs/about-form-1040",
+    "https://www.irs.gov/payments/online-account-for-individuals",
+    "https://www.irs.gov/individuals/get-transcript",
+    "https://www.irs.gov/filing/taxable-income",
+    "https://www.irs.gov/forms-pubs/about-form-1040",
+    "https://www.irs.gov/pub/irs-pdf/f1040s1.pdf",
+    "https://www.irs.gov/filing/adjusted-gross-income"
+  ],
+  "fetched_at": "2026-09-22T15:02:47.590019+00:00",
+  "low_quality": false,
+  "text_sha256": "c37b0df0098fbb2600e9b4540b23eaab1cd9914229f7020f63f3299a62e13890"
+}
