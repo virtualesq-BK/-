@@ -1,8 +1,15 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Noto_Sans_KR } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+// Same Korean-friendly display font family as "The Beginning" (Pretendard
+// stack), via next/font/google so it's self-hosted and doesn't need the
+// Pretendard CDN.
+const notoSansKr = Noto_Sans_KR({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-body',
+});
 
 export const metadata: Metadata = {
   title: 'TaxMate AI — Self-Employed Tax Filing Assistant',
@@ -17,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${notoSansKr.variable} font-sans`}>{children}</body>
     </html>
   );
 }

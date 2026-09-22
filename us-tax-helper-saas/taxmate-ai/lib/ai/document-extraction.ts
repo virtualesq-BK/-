@@ -5,8 +5,9 @@ import {
   type ExtractedTaxData,
 } from '@/lib/documents/types';
 import { parsePDF, parseWithOCR } from '@/lib/ai/document-parser';
+import { openAIClientOptions } from '@/lib/ai/openai-config';
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const openai = new OpenAI(openAIClientOptions());
 
 const EXTRACTION_PROMPT = `You are a US tax document data extraction specialist.
 Extract structured data from W-2, 1099-NEC, 1099-K, or business receipt documents.

@@ -4,6 +4,7 @@ import { ChatOpenAI } from '@langchain/openai';
 import { RetrievalQAChain } from 'langchain/chains';
 import { getIrsVectorStore } from '@/lib/ai/vector-store';
 import { getRagSystemPrompt } from '@/lib/ai/prompts';
+import { langchainOpenAIOptions } from '@/lib/ai/openai-config';
 
 class IrsPublicationRetriever extends BaseRetriever {
   lc_namespace = ['taxmate', 'irs_retriever'];
@@ -50,7 +51,7 @@ export async function runRetrievalQA(query: string): Promise<{
   const llm = new ChatOpenAI({
     modelName: process.env.OPENAI_CHAT_MODEL ?? 'gpt-4o',
     temperature: 0.2,
-    openAIApiKey: process.env.OPENAI_API_KEY,
+    ...langchainOpenAIOptions(),
   });
 
   const retriever = new IrsPublicationRetriever(5);

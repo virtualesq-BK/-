@@ -1,4 +1,5 @@
 import { OpenAIEmbeddings } from '@langchain/openai';
+import { langchainOpenAIOptions } from '@/lib/ai/openai-config';
 
 const EMBEDDING_MODEL =
   process.env.OPENAI_EMBEDDING_MODEL ?? 'text-embedding-3-small';
@@ -8,7 +9,7 @@ let embeddingsInstance: OpenAIEmbeddings | null = null;
 export function getEmbeddings(): OpenAIEmbeddings {
   if (!embeddingsInstance) {
     embeddingsInstance = new OpenAIEmbeddings({
-      openAIApiKey: process.env.OPENAI_API_KEY,
+      ...langchainOpenAIOptions(),
       modelName: EMBEDDING_MODEL,
     });
   }

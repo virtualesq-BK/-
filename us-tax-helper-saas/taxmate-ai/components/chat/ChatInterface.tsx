@@ -197,7 +197,7 @@ export function ChatInterface() {
       )}
 
       {cpaRequestStatus && (
-        <div className="border-b bg-blue-50 p-3 text-center text-sm text-blue-800">
+        <div className="border-b bg-secondary p-3 text-center text-sm text-secondary-foreground">
           {cpaRequestStatus}
         </div>
       )}

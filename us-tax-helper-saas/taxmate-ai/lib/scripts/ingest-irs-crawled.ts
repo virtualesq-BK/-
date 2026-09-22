@@ -31,6 +31,7 @@ import OpenAI from 'openai';
 import { RecursiveCharacterTextSplitter } from '@langchain/textsplitters';
 import { Document } from '@langchain/core/documents';
 import { getIrsVectorStore } from '../ai/vector-store';
+import { openAIClientOptions } from '../ai/openai-config';
 
 const DATA_DIR = path.join(process.cwd(), 'data');
 const INDEX_PATH = path.join(DATA_DIR, 'index.jsonl');
@@ -39,7 +40,7 @@ const CHUNK_OVERLAP = 200;
 const SUMMARY_MODEL = process.env.OPENAI_SUMMARY_MODEL ?? 'gpt-4o-mini';
 const MIN_TEXT_LENGTH = 200;
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const openai = new OpenAI(openAIClientOptions());
 
 type IndexEntry = {
   type: 'html' | 'pdf';

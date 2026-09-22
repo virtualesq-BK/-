@@ -5,10 +5,20 @@ generator client {
   provider = "prisma-client-js"
 }
 
+// This database is shared with "The Beginning" (existing app, auth/public
+// schemas already in use). taxmate-ai's own tables live in the "taxmate"
+// schema below to avoid colliding with that app's tables.
+//
+// IMPORTANT: do not add "public" or "auth" here. `prisma db push` treats
+// every listed schema as fully owned by this Prisma schema and will offer
+// to DROP any table in it that isn't declared here — which would destroy
+// "The Beginning"'s existing data (auth.users, public.contract_analyses,
+// docs, profiles, reviews, etc.). Keep this list to "taxmate" only.
 datasource db {
   provider  = "postgresql"
   url       = env("DATABASE_URL")
   directUrl = env("DIRECT_URL")
+  schemas   = ["taxmate"]
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -18,6 +28,8 @@ datasource db {
 enum UserRole {
   USER
   CPA
+
+  @@schema("taxmate")
 }
 
 enum ProfileBusinessType {
@@ -25,6 +37,8 @@ enum ProfileBusinessType {
   SoleProp
   SCorp
   Partnership
+
+  @@schema("taxmate")
 }
 
 enum TaxDocumentType {
@@ -33,6 +47,8 @@ enum TaxDocumentType {
   K1099     // 1099-K
   Receipt
   Other
+
+  @@schema("taxmate")
 }
 
 enum TaxDocumentStatus {
@@ -40,6 +56,8 @@ enum TaxDocumentStatus {
   PROCESSING
   COMPLETED
   FAILED
+
+  @@schema("taxmate")
 }
 
 enum TaxReturnStatus {
@@ -49,12 +67,16 @@ enum TaxReturnStatus {
   COMPLETED
   FILED
   REJECTED
+
+  @@schema("taxmate")
 }
 
 enum MessageRole {
   USER
   AI
   CPA
+
+  @@schema("taxmate")
 }
 
 enum PaymentStatus {
@@ -62,6 +84,8 @@ enum PaymentStatus {
   COMPLETED
   REFUNDED
   SCHEDULED
+
+  @@schema("taxmate")
 }
 
 enum CpaMatchStatus {
@@ -69,6 +93,8 @@ enum CpaMatchStatus {
   ACCEPTED
   DECLINED
   EXPIRED
+
+  @@schema("taxmate")
 }
 
 enum EfileStatus {
@@ -76,6 +102,8 @@ enum EfileStatus {
   PENDING
   ACCEPTED
   REJECTED
+
+  @@schema("taxmate")
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -137,6 +165,8 @@ model User {
   @@index([cpaState])
   @@index([role])
   @@index([deletedAt])
+
+  @@schema("taxmate")
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -157,6 +187,8 @@ model AiFeedback {
 
   @@index([userId])
   @@index([createdAt])
+
+  @@schema("taxmate")
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -179,6 +211,8 @@ model Notification {
   @@index([userId])
   @@index([read])
   @@index([createdAt])
+
+  @@schema("taxmate")
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -210,6 +244,8 @@ model BusinessProfile {
 
   @@index([userId])
   @@index([deletedAt])
+
+  @@schema("taxmate")
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -238,6 +274,8 @@ model TaxDocument {
   @@index([taxYear])
   @@index([status])
   @@index([deletedAt])
+
+  @@schema("taxmate")
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -279,6 +317,8 @@ model TaxReturn {
   @@index([taxYear])
   @@index([status])
   @@index([deletedAt])
+
+  @@schema("taxmate")
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -303,6 +343,8 @@ model Message {
   @@index([userId])
   @@index([taxReturnId])
   @@index([deletedAt])
+
+  @@schema("taxmate")
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -328,6 +370,8 @@ model AuditRiskScore {
   @@index([userId])
   @@index([taxReturnId])
   @@index([deletedAt])
+
+  @@schema("taxmate")
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -356,6 +400,8 @@ model CpaMatchRequest {
   @@index([userId])
   @@index([cpaId])
   @@index([status])
+
+  @@schema("taxmate")
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -390,6 +436,8 @@ model PaymentTransaction {
   @@index([taxReturnId])
   @@index([status])
   @@index([deletedAt])
+
+  @@schema("taxmate")
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -414,6 +462,8 @@ model Account {
 
   @@unique([provider, providerAccountId])
   @@index([userId])
+
+  @@schema("taxmate")
 }
 
 model Session {
@@ -425,6 +475,8 @@ model Session {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
+
+  @@schema("taxmate")
 }
 
 model VerificationToken {
@@ -433,4 +485,6 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+
+  @@schema("taxmate")
 }

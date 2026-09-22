@@ -8,8 +8,9 @@ import {
   type TaxLineItem,
 } from '@/lib/tax/draft-types';
 import { getIndustryDeductionRate } from '@/lib/tax/industry-rates';
+import { openAIClientOptions } from '@/lib/ai/openai-config';
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const openai = new OpenAI(openAIClientOptions());
 
 export async function generateTaxDraft(
   userId: string,

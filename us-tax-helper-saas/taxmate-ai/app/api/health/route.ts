@@ -3,6 +3,7 @@ import { prisma } from '@/lib/db/prisma';
 import { isRedisConfigured } from '@/lib/ai/chat-history';
 import { isQueueConfigured } from '@/lib/queue/connection';
 import OpenAI from 'openai';
+import { openAIClientOptions } from '@/lib/ai/openai-config';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -91,7 +92,7 @@ async function checkOpenAI(): Promise<CheckResult> {
     return { status: 'error', message: 'OPENAI_API_KEY missing' };
   }
   try {
-    const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+    const client = new OpenAI(openAIClientOptions());
     const { latencyMs } = await timed(async () => {
       for await (const _ of client.models.list()) break;
     });
