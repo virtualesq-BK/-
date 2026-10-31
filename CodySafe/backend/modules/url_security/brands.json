@@ -1,0 +1,54 @@
+{
+  "financial": {
+    "paypal": ["paypal.com"],
+    "chase": ["chase.com"],
+    "bankofamerica": ["bankofamerica.com"],
+    "citibank": ["citibank.com"],
+    "wellsfargo": ["wellsfargo.com"],
+    "shinhan": ["shinhanbank.com", "shinhan.com"],
+    "kookmin": ["kbstar.com", "kb.co.kr"],
+    "hana": ["hanabank.com", "hana.co.kr"],
+    "woori": ["wooribank.com", "woori.com"]
+  },
+  "government": {
+    "irs": ["irs.gov"],
+    "gov": ["usa.gov"],
+    "nts": ["nts.go.kr"],
+    "moj": ["moj.go.kr"]
+  },
+  "ecommerce": {
+    "amazon": ["amazon.com", "amazon.co.jp", "amazon.co.uk", "amazon.de"],
+    "ebay": ["ebay.com"],
+    "coupang": ["coupang.com"],
+    "naver_shopping": ["shopping.naver.com"],
+    "gmarket": ["gmarket.co.kr"]
+  },
+  "email": {
+    "google": ["gmail.com", "google.com"],
+    "microsoft": ["outlook.com", "hotmail.com", "live.com", "microsoft.com"],
+    "yahoo": ["yahoo.com"],
+    "naver": ["naver.com"],
+    "kakao": ["kakao.com", "daum.net"]
+  },
+  "social": {
+    "facebook": ["facebook.com", "fb.com"],
+    "instagram": ["instagram.com"],
+    "twitter": ["twitter.com", "x.com"],
+    "linkedin": ["linkedin.com"],
+    "youtube": ["youtube.com"],
+    "tiktok": ["tiktok.com"],
+    "kakao_talk": ["kakaopage.com", "talk.kakao.com"]
+  },
+  "cloud": {
+    "aws": ["aws.amazon.com", "amazonaws.com"],
+    "azure": ["azure.microsoft.com", "azure.com"],
+    "gcp": ["cloud.google.com"],
+    "dropbox": ["dropbox.com"],
+    "apple": ["apple.com", "icloud.com"]
+  },
+  "portal": {
+    "naver": ["naver.com"],
+    "kakao": ["kakao.com", "daum.net"],
+    "google": ["google.com"]
+  }
+}
